@@ -36,3 +36,21 @@ Netlify automatically deploys new changes commited to master on GitHub. If you w
 [![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
 
 Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
+
+### Local development
+
+- You develop the templates in /template, and review your changes in /build.
+
+- Install dependencies with npm install in the root folder. This will install the template development tool that watches changes in the /template folder and output the template to /build.
+
+- Run npm run dev in root folder. This will build the template files to /build. This is how the code will look for those who install the project later.
+
+- Run npm install in ./build/web and sanity install in /build/studio This will install the necessary dependencies for the Gatsby frontend and the Studio.
+
+- Run npm run dev in ./build/web and sanity start in /build/studio. This will start the development servers for the Gatsby frontend and Sanity Studio.
+
+#### Notes
+
+- When developing ProjectId and dataset name can be changed in template-values-development.json
+- If you change anything in the schema, run `npm run graphql-deploy`
+  - if you get an error about `dangerous something....` then run `sanity graphql deploy --force` inside the `studio` dir
