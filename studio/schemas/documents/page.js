@@ -15,25 +15,15 @@ export default {
       title: "Title",
     },
     {
-      name: "slug",
-      type: "slug",
-      title: "Slug",
-      options: {
-        source: "title",
-        maxLength: 96,
-      },
-    },
-    {
       name: "content",
-      // type: "array",
-      type: "text",
+      type: "array",
       title: "Page sections",
-      // of: [
-      //   { type: "hero" },
-      //   { type: "imageSection" },
-      //   { type: "mailchimp" },
-      //   { type: "textSection" },
-      // ],
+      of: [
+        { type: "hero" },
+        { type: "imageSection" },
+        { type: "mailchimp" },
+        { type: "textSection" },
+      ],
     },
     {
       name: "description",
