@@ -1,4 +1,5 @@
 const { isFuture } = require("date-fns");
+const path = require("path");
 /**
  * Implement Gatsby's Node APIs in this file.
  *
@@ -46,6 +47,67 @@ async function createBlogPostPages(graphql, actions) {
     });
 }
 
+async function createPages(graphql, actions) {
+  const { data } = await graphql(`
+    {
+      allSanityRoute {
+        edges {
+          node {
+            id
+            slug {
+              _key
+              _type
+              current
+            }
+            page {
+              id
+              content {
+                ... on SanityHero {
+                  _key
+                  _type
+                }
+                ... on SanityImageSection {
+                  _key
+                  _type
+                }
+                ... on SanityMailchimp {
+                  _key
+                  _type
+                }
+                ... on SanityTestimonial {
+                  _key
+                  _type
+                }
+                ... on SanityTextSection {
+                  _key
+                  _type
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  console.log("allSanityRoute: ", data.allSanityRoute.edges);
+  data.allSanityRoute.edges.forEach((pg) => {
+    const { slug, page } = pg.node;
+    // console.log("node: ", pg.node);
+    console.log("slug: ", slug);
+    console.log("page: ", page);
+    actions.createPage({
+      path: `${slug.current}`,
+      component: path.resolve("./src/pages/Blog.js"),
+      // slug.current === "/blog"
+      //   ? path.resolve("./src/pages/Blog.js")
+      //   : path.resolve("./src/templates/NewPage.js"),
+      context: {},
+    });
+  });
+}
+
 exports.createPages = async ({ graphql, actions }) => {
   await createBlogPostPages(graphql, actions);
+  await createPages(graphql, actions);
 };
