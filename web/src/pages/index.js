@@ -42,6 +42,13 @@ export const query = graphql`
             _rawChildren
           }
           heading
+          subheading
+          ctas {
+            _key
+            link
+            title
+            type
+          }
         }
         ... on SanityImageSection {
           _key
@@ -98,7 +105,7 @@ const IndexPage = (props) => {
       /> */}
       <Container>
         {/* <h1 hidden>Welcome to {site.title}</h1> */}
-        <Landing />
+        <Landing pageData={data.landingPage} />
       </Container>
     </Layout>
   );
