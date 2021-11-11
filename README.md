@@ -54,3 +54,7 @@ Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on tw
 - When developing ProjectId and dataset name can be changed in template-values-development.json
 - If you change anything in the schema, run `npm run graphql-deploy`
   - if you get an error about `dangerous something....` then run `sanity graphql deploy --force` inside the `studio` dir
+
+#### TODOs
+
+- Need to update site settings for SEO. See index page.
