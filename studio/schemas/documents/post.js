@@ -29,6 +29,12 @@ export default {
       description: "This can be used to schedule post for publishing",
     },
     {
+      name: "readTime",
+      type: "string",
+      title: "Read Time",
+      description: "How long it takes to read this article",
+    },
+    {
       name: "mainImage",
       type: "mainImage",
       title: "Main image",
