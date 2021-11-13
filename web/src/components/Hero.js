@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Hero({ pageData }) {
   // TODO we'll nee to map over this eventually
-  console.log("content: ", pageData.content);
-  const { heading, subheading, tagline, ctas } = pageData.content[0];
+  console.log("content: ", pageData?.content[0]);
+  const { heading, subheading, tagline, ctas } = pageData?.content[0];
   const { style, _rawChildren: taglineItems } = tagline[0];
   const { text: taglineText } = taglineItems[0];
   return (
