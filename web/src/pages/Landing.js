@@ -5,7 +5,9 @@ import Hero from "../components/Hero";
 const LandingPage = ({ pageData }) => {
   return (
     <>
-      <Hero pageData={pageData} />
+      {pageData.content.map((data) => (
+        <Hero key={data._key} pageData={data} />
+      ))}
       <LatestPosts />
     </>
   );

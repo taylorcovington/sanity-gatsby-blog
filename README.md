@@ -58,3 +58,6 @@ Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on tw
 #### TODOs
 
 - Need to update site settings for SEO. See index page.
+- Need to create small, reusable components such as image containers,
+  - blog containters, buttons, etc
+  - colors, design
