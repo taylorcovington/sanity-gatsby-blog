@@ -27,14 +27,31 @@ export const query = graphql`
         node {
           id
           publishedAt
+          readTime
           mainImage {
             ...SanityImage
             alt
           }
           title
-          _rawExcerpt
+          excerpt {
+            children {
+              text
+            }
+          }
           slug {
             current
+          }
+          authors {
+            author {
+              name
+              image {
+                ...SanityImage
+                alt
+              }
+            }
+          }
+          categories {
+            title
           }
         }
       }
@@ -74,12 +91,13 @@ const BlogPage = (props) => {
         keywords={site.keywords}
       />
       <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
+        {/* <h1 hidden>Welcome to {site.title}</h1> */}
         {postNodes && (
           <BlogPostPreviewList
-            title="Latest blog posts"
-            nodes={postNodes}
-            browseMoreHref="/archive/"
+            heading="Welcome to my blog"
+            subheading="You'll find posts about full-stack development, career tips, and dev resources."
+            posts={postNodes}
+            archiveUrl="/archive/"
           />
         )}
       </Container>
