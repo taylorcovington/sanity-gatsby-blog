@@ -1,5 +1,5 @@
 import React from "react";
-import LatestPosts from "../components/blog/latest-posts";
+import LatestPosts from "../components/blog/LatestPosts";
 import Hero from "../components/Hero";
 
 const LandingPage = ({ pageData }) => {
