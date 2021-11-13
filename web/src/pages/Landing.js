@@ -3,9 +3,10 @@ import LatestPosts from "../components/blog/LatestPosts";
 import Hero from "../components/Hero";
 
 const LandingPage = ({ pageData }) => {
+  console.log("pageData1: ", pageData);
   return (
     <>
-      {pageData.content.map((data) => (
+      {pageData?.content.map((data) => (
         <Hero key={data._key} pageData={data} />
       ))}
       <LatestPosts />
