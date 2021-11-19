@@ -19,10 +19,8 @@ const PostPreview = ({ postData }) => {
 
   const { author } = authors[0];
   const { name: authorName, image: authorImage } = author;
-  console.log("authorName: ", authorName);
   const { children } = excerpt[0];
   const { text: excerptText } = children[0];
-  console.log("slug: ", slug.current);
 
   return (
     <Link to={getBlogUrl(publishedAt, slug.current)}>

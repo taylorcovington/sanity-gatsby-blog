@@ -2,9 +2,8 @@ import React from "react";
 
 export default function Hero({ pageData }) {
   const { heading, subheading, tagline, ctas } = pageData;
-  console.log("tagline:", tagline);
-  // const { style, _rawChildren: taglineItems } = tagline[0];
-  // const { text: taglineText } = taglineItems[0];
+  const { style, _rawChildren: taglineItems } = tagline[0];
+  const { text: taglineText } = taglineItems[0];
   return (
     <div
       className="relative bg-gray-800 overflow-hidden"
@@ -90,14 +89,7 @@ export default function Hero({ pageData }) {
               <span className="text-indigo-400 md:block">{subheading}</span>
             </h1>
             <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-              {tagline.map((t) => {
-                const { style, _rawChildren: taglineItems } = t;
-
-                return taglineItems.map((tli) => {
-                  const { text: taglineText } = tli;
-                  return taglineText;
-                });
-              })}
+              {taglineText}
             </p>
             <div className="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
               {ctas.map((cta) => {
