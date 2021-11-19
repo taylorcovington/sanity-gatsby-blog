@@ -30,6 +30,7 @@ import logo from "./objects/logo";
 
 // Landing page sections
 import hero from "./objects/hero";
+import about from "./objects/about";
 import imageSection from "./objects/imageSection";
 import mailchimp from "./objects/mailchimp";
 import textSection from "./objects/textSection";
@@ -60,6 +61,7 @@ export default createSchema({
     embedHTML,
     figure,
     hero,
+    about,
     imageSection,
     internalLink,
     link,
