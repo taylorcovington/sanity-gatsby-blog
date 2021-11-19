@@ -6,7 +6,6 @@ import AboutMe from "../components/AboutMe";
 import ContactMe from "../components/Contact";
 
 const LandingPage = ({ pageData }) => {
-  console.log("page data: ", pageData.content);
   return (
     <>
       {pageData ? (
