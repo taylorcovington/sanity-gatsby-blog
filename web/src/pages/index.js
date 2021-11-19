@@ -44,6 +44,20 @@ export const query = graphql`
             type
           }
         }
+        ... on SanityAbout {
+          _key
+          heading
+          mainImage {
+            ...SanityImage
+            alt
+          }
+          body {
+            _key
+            _rawChildren
+            style
+            list
+          }
+        }
         ... on SanityImageSection {
           _key
           _type

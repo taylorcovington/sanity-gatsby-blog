@@ -6,14 +6,29 @@ import AboutMe from "../components/AboutMe";
 import ContactMe from "../components/Contact";
 
 const LandingPage = ({ pageData }) => {
+  console.log("page data: ", pageData.content);
   return (
     <>
-      {pageData?.content.map((data) => (
-        <Hero key={data._key} pageData={data} />
-      ))}
+      {pageData ? (
+        pageData?.content.map((data) => {
+          if (data.__typename === "SanityHero") {
+            return <Hero key={data._key} pageData={data} />;
+          }
+        })
+      ) : (
+        <></>
+      )}
       <LatestPosts />
       <FeatureList />
-      <AboutMe />
+      {pageData ? (
+        pageData?.content.map((data) => {
+          if (data.__typename === "SanityAbout") {
+            return <AboutMe key={data._key} pageData={data} />;
+          }
+        })
+      ) : (
+        <></>
+      )}
       <ContactMe />
     </>
   );
