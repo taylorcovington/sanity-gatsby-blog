@@ -12,8 +12,7 @@ export default {
                 "NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.",
               sites: [
                 {
-                  buildHookId:
-                    "61773f689ffec7f1321e2014",
+                  buildHookId: "61773f689ffec7f1321e2014",
                   title: "Sanity Studio",
                   name: "sanity-gatsby-blog-studio-nfknqeaw",
                   apiId: "d93d5fdb-b387-407a-a196-8966e983177e",
@@ -31,13 +30,12 @@ export default {
         data: [
           {
             title: "GitHub repo",
-            value:
-              "https://github.com/taylorcovington/sanity-gatsby-blog",
+            value: "https://github.com/taylorcovington/sanity-gatsby-blog",
             category: "Code",
           },
           {
             title: "Frontend",
-            value: "https://sanity-gatsby-blog-web-6b3zrjem.netlify.app",
+            value: "https://taylorjcovington.com",
             category: "apps",
           },
         ],
