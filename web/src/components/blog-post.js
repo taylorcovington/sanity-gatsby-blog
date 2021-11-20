@@ -10,7 +10,6 @@ import { imageUrlFor } from "../lib/image-url";
 function BlogPost(props) {
   const { _rawBody, authors, categories, title, mainImage, publishedAt } =
     props;
-  console.log("_rawBody: ", _rawBody);
   return (
     <div className="relative py-16 bg-white overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">

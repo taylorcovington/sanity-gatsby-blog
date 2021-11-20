@@ -7,26 +7,6 @@ const serializers = {
     /* eslint-disable-next-line react/display-name */
     authorReference: ({ node }) => <span>{node.author.name}</span>,
     mainImage: Figure,
-    code: (props) =>
-      console.log("code block", props) || (
-        <pre data-language={props.node.language}>
-          <code>{props.node.code}</code>
-        </pre>
-      ),
-    list: (props) =>
-      console.log("list", props) ||
-      (props.type === "bullet" ? (
-        <ul>{props.children}</ul>
-      ) : (
-        <ol>{props.children}</ol>
-      )),
-    listItem: (props) =>
-      console.log("list", props) ||
-      (props.type === "bullet" ? (
-        <li>{props.children}</li>
-      ) : (
-        <li>{props.children}</li>
-      )),
   },
 };
 
