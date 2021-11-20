@@ -4,10 +4,9 @@ import { buildImageObj } from "../lib/helpers";
 import { CameraIcon } from "@heroicons/react/solid";
 
 const AboutMe = ({ pageData }) => {
-  console.log("about me data: ", pageData);
   const { heading, body, mainImage } = pageData;
   return (
-    <div className="bg-white overflow-hidden">
+    <div id="about" className="bg-white overflow-hidden">
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">

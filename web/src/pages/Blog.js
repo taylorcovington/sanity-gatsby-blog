@@ -69,7 +69,6 @@ const BlogPage = (props) => {
       </Layout>
     );
   }
-  console.log("data: ", data);
   const site = (data || {}).site;
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)

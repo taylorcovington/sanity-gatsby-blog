@@ -20,14 +20,14 @@ const supportLinks = [
     name: "DevOps",
     href: "#",
     description:
-      "Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.",
+      "I have worked with both Azure and AWS. I think serverless is the future of building apps!",
     icon: CloudIcon,
   },
 ];
 
 const FeatureList = () => {
   return (
-    <div className="bg-white">
+    <div id="learnMore" className="bg-white">
       {/* Header */}
       <div className="relative pb-32 bg-gray-800">
         <div className="absolute inset-0">
@@ -81,14 +81,14 @@ const FeatureList = () => {
                   {link.description}
                 </p>
               </div>
-              <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
+              {/* <div className="p-6 bg-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
                 <a
                   href={link.href}
                   className="text-base font-medium text-indigo-700 hover:text-indigo-600"
                 >
                   Contact us<span aria-hidden="true"> &rarr;</span>
                 </a>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

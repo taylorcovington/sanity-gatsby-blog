@@ -90,12 +90,8 @@ async function createPages(graphql, actions) {
     }
   `);
 
-  console.log("allSanityRoute: ", data.allSanityRoute.edges);
   data.allSanityRoute.edges.forEach((pg) => {
     const { slug, page } = pg.node;
-    // console.log("node: ", pg.node);
-    console.log("slug: ", slug);
-    console.log("page: ", page);
     actions.createPage({
       path: `${slug.current}`,
       component: path.resolve("./src/pages/Blog.js"),

@@ -9,8 +9,8 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
   { name: "Blog", href: "/blog" },
-  { name: "What I offer", href: "#" },
-  { name: "About", href: "#" },
+  { name: "What I offer", href: "#learnMore" },
+  { name: "About", href: "#about" },
   // { name: "", href: "#" },
 ];
 
@@ -54,7 +54,7 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
           <div className="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
             <span className="inline-flex rounded-md shadow">
               <a
-                href="#"
+                href="#contactMe"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50"
               >
                 Work with Me
