@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import FeatureList from "../components/FeatureList";
 import AboutMe from "../components/AboutMe";
 import ContactMe from "../components/Contact";
+import TrustedBy from "../components/TrustedBy";
 
 const LandingPage = ({ pageData }) => {
   return (
@@ -28,6 +29,7 @@ const LandingPage = ({ pageData }) => {
       ) : (
         <></>
       )}
+      <TrustedBy />
       <ContactMe />
     </>
   );
