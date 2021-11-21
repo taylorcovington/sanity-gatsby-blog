@@ -9,16 +9,7 @@ const AboutMe = ({ pageData }) => {
     <div id="about" className="bg-white overflow-hidden">
       <div className="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
-        <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
-          <div>
-            <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
-              About
-            </h2>
-            <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              {heading}
-            </h3>
-          </div>
-        </div>
+
         <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
           <div className="relative lg:row-start-1 lg:col-start-2">
             <svg
@@ -76,6 +67,16 @@ const AboutMe = ({ pageData }) => {
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
+            <div className="mx-auto text-base max-w-prose lg:grid lg:gap-8 lg:max-w-none">
+              <div>
+                <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+                  About
+                </h2>
+                <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                  {heading}
+                </h3>
+              </div>
+            </div>
             {body.map((aboutSection) => {
               const { _rawChildren } = aboutSection;
               const { _key, text } = _rawChildren[0];
