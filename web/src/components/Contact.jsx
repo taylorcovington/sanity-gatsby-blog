@@ -80,10 +80,13 @@ const ContactMe = () => {
               data-netlify="true"
               onSubmit="submit"
               data-netlify-recaptcha="true"
-              netlify-honeypot="bot-field"
+              data-netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
             >
               <input type="hidden" name="form-name" value="contact-form" />
+              <div hidden>
+                <input name="bot-field" />
+              </div>
               <div>
                 <label htmlFor="name" className="sr-only">
                   Full name
