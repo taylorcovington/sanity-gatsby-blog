@@ -73,7 +73,7 @@ const ContactMe = () => {
         </div>
         <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="max-w-lg mx-auto lg:max-w-none">
-            <form
+            {/* <form
               name="contact-form"
               method="post"
               data-netlify="true"
@@ -154,6 +154,18 @@ const ContactMe = () => {
                   Submit
                 </button>
               </div>
+            </form> */}
+
+            <form
+              method="post"
+              name="contact-form v2"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              <input type="hidden" name="form-name" value="contact-form v2" />
+              <input type="text" placeholder="Enter your name" name="name" />
+              <input type="text" placeholder="Enter your email" name="email" />
+              <button type="submit">Submit</button>
             </form>
           </div>
         </div>
