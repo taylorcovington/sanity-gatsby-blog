@@ -3,24 +3,24 @@ import { CodeIcon, DatabaseIcon, CloudIcon } from "@heroicons/react/outline";
 
 const supportLinks = [
   {
-    name: "Front-end Development",
+    name: "Web App Development",
     href: "#",
     description:
-      "I turn designs into websites and applications. I primarily work with ReactJS but I love learning new ways build great user experiences.",
+      "I turn your app designs into full-stack applications. I work with ReactJS, Node, GraphQL, AWS, and PostgreSQL",
     icon: CodeIcon,
   },
   {
-    name: "Back-end Development",
+    name: "Website Development",
     href: "#",
     description:
-      "I currently specialize in Node.js and GraphQL to build well structured API's. I also have training in Ruby on Rails.",
+      "Your website is where you make your first impression and convert users. I work with CSS, HTML, React, and Gatsby to build high converting websites",
     icon: DatabaseIcon,
   },
   {
-    name: "DevOps",
+    name: "API Development",
     href: "#",
     description:
-      "I have worked with both Azure and AWS. I think serverless is the future of building apps!",
+      "I have years of experience building API's using Node, Serverless, and AWS",
     icon: CloudIcon,
   },
 ];
