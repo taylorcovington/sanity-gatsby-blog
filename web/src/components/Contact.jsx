@@ -2,28 +2,28 @@ import React, { useState } from "react";
 import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 
 const ContactMe = () => {
-  const [state, setState] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-  const [successModal, setSuccessModal] = useState(false);
+  // const [state, setState] = useState({
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  //   message: "",
+  // });
+  // const [successModal, setSuccessModal] = useState(false);
 
-  const handleChange = (event) => {
-    const value = event.target.value;
-    const name = event.target.name;
-    setState({
-      ...state,
-      [name]: value,
-    });
-  };
+  // const handleChange = (event) => {
+  //   const value = event.target.value;
+  //   const name = event.target.name;
+  //   setState({
+  //     ...state,
+  //     [name]: value,
+  //   });
+  // };
 
-  const handleAction = () => {
-    alert("success!");
-  };
+  // const handleAction = () => {
+  //   alert("success!");
+  // };
 
-  console.log("state: ", state);
+  // console.log("state: ", state);
 
   return (
     <div id="contactMe" className="relative bg-white">
@@ -76,24 +76,25 @@ const ContactMe = () => {
             <form
               action="/"
               name="contact-form"
-              method="POST"
+              method="post"
               data-netlify="true"
+              onSubmit="submit"
               data-netlify-recaptcha="true"
               netlify-honeypot="bot-field"
               className="grid grid-cols-1 gap-y-6"
             >
-              <input type="hidden" name="form-name" value="contact-form" />{" "}
+              <input type="hidden" name="form-name" value="contact-form" />
               <div>
-                <label htmlFor="full-name" className="sr-only">
+                <label htmlFor="name" className="sr-only">
                   Full name
                 </label>
                 <input
                   type="text"
                   name="name"
                   id="name"
-                  value={state.name}
+                  // value={state.name}
                   autoComplete="name"
-                  onChange={handleChange}
+                  // onChange={handleChange}
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   placeholder="Full name"
                 />
@@ -106,8 +107,8 @@ const ContactMe = () => {
                   id="email"
                   name="email"
                   type="email"
-                  value={state.email}
-                  onChange={handleChange}
+                  // value={state.email}
+                  // onChange={handleChange}
                   autoComplete="email"
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   placeholder="Email"
@@ -122,8 +123,8 @@ const ContactMe = () => {
                   name="phone"
                   id="phone"
                   autoComplete="tel"
-                  value={state.phone}
-                  onChange={handleChange}
+                  // value={state.phone}
+                  // onChange={handleChange}
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
                   placeholder="Phone"
                 />
@@ -135,8 +136,8 @@ const ContactMe = () => {
                 <textarea
                   id="message"
                   name="message"
-                  value={state.message}
-                  onChange={handleChange}
+                  // value={state.message}
+                  // onChange={handleChange}
                   rows={4}
                   className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
                   placeholder="Message"
