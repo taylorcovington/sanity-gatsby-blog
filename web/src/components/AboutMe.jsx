@@ -12,7 +12,7 @@ const AboutMe = ({ pageData }) => {
 
         <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
           <div className="relative lg:row-start-1 lg:col-start-2">
-            <svg
+            {/* <svg
               className="hidden lg:block absolute top-0 right-0 -mt-20 -mr-20"
               width={404}
               height={384}
@@ -44,25 +44,25 @@ const AboutMe = ({ pageData }) => {
                 height={384}
                 fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)"
               />
-            </svg>
-            <div className=" -mt-24 relative text-base mx-auto max-w-prose lg:max-w-none">
+            </svg> */}
+            <div className="text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
                 <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                   <img
                     className="rounded-lg shadow-lg object-cover object-center"
                     src={imageUrlFor(buildImageObj(mainImage))}
-                    alt="Whitney leaning against a railing on a downtown street"
+                    alt="profile picture"
                     width={1184}
                     height={1376}
                   />
                 </div>
-                <figcaption className="mt-3 flex text-sm text-gray-500">
+                {/* <figcaption className="mt-3 flex text-sm text-gray-500">
                   <CameraIcon
                     className="flex-none w-5 h-5 text-gray-400"
                     aria-hidden="true"
                   />
                   <span className="ml-2">Photograph by Will Liang</span>
-                </figcaption>
+                </figcaption> */}
               </figure>
             </div>
           </div>

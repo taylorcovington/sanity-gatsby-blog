@@ -9,8 +9,8 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 
 const navigation = [
   { name: "Blog", href: "/blog" },
-  { name: "What I offer", href: "#learnMore" },
-  { name: "About", href: "#about" },
+  { name: "What I offer", href: "/#learnMore" },
+  { name: "About", href: "/#about" },
   // { name: "", href: "#" },
 ];
 
@@ -104,12 +104,12 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
                 </a>
               ))}
             </div>
-            <a
-              href="#"
+            <Link
+              to="/#contactMe"
               className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
             >
               Work with me
-            </a>
+            </Link>
           </div>
         </Popover.Panel>
       </Transition>
@@ -118,29 +118,3 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
 );
 
 export default Header;
-
-// OLD CODE:
-{
-  /* <div className={styles.root}>
-<div className={styles.wrapper}>
-  <div className={styles.branding}>
-    <Link to="/">{siteTitle}</Link>
-  </div>
-
-  <button
-    className={styles.toggleNavButton}
-    onClick={showNav ? onHideNav : onShowNav}
-  >
-    <Icon symbol="hamburger" />
-  </button>
-
-  <nav className={cn(styles.nav, showNav && styles.showNav)}>
-    <ul>
-      <li>
-        <Link to="/archive/">Archive</Link>
-      </li>
-    </ul>
-  </nav>
-</div>
-</div> */
-}

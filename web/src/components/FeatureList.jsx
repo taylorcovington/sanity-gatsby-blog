@@ -6,14 +6,14 @@ const supportLinks = [
     name: "Front-end Development",
     href: "#",
     description:
-      "I primarily work with React.js and follow the atomic principles while building components. I also love working with Apollo to fetch data using GraphQL. I feel GraphQL is the future of APIs.",
+      "I turn designs into websites and applications. I primarily work with ReactJS but I love learning new ways build great user experiences.",
     icon: CodeIcon,
   },
   {
     name: "Back-end Development",
     href: "#",
     description:
-      "I currently specialize in Node.js and GraphQL to build resolvers,queries and mutations. I also have training in Ruby on Rails.",
+      "I currently specialize in Node.js and GraphQL to build well structured API's. I also have training in Ruby on Rails.",
     icon: DatabaseIcon,
   },
   {
