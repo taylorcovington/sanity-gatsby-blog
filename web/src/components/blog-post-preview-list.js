@@ -1,6 +1,6 @@
-import * as styles from "./blog-post-preview-list.module.css";
-import BlogPostPreview from "./blog-post-preview";
-import { Link } from "gatsby";
+// import * as styles from "./blog-post-preview-list.module.css";
+// import BlogPostPreview from "./blog-post-preview";
+// import { Link } from "gatsby";
 import React from "react";
 import BlogHeading from "./blog/BlogHeading";
 import PostPreview from "./blog/PostPreview";
@@ -19,36 +19,18 @@ function BlogPostPreviewGrid({ heading, subheading, posts, archiveUrl }) {
           })}
         </div>
       </div>
-      {archiveUrl && (
+      {/* <Link to="/blog" className="pointer">
+        Check out more posts
+      </Link> */}
+      {/* {archiveUrl && (
         <div className={styles.browseMoreNav}>
-          <Link to={archiveUrl}>Check out more posts</Link>
+          <Link to="/blog" className="pointer">
+            Check out more posts
+          </Link>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
 
-// BlogPostPreviewGrid.defaultProps = {
-//   title: "",
-//   nodes: [],
-//   browseMoreHref: "",
-// };
-
 export default BlogPostPreviewGrid;
-
-// <div className={styles.root}>
-// {props.title && <h2 className={styles.headline}>{props.title}</h2>}
-// <BlogHeading
-//   heading="Welcome to my blog"
-//   subheading="You'll find posts about full-stack development, career tips, and dev resources."
-// />
-// <ul className={styles.grid}>
-//   {props.nodes &&
-//     props.nodes.map((node) => (
-//       <li key={node.id}>
-//         <BlogPostPreview {...node} isInList />
-//       </li>
-//     ))}
-// </ul>
-
-// </div>

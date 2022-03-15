@@ -74,7 +74,7 @@ const PostPreview = ({ postData }) => {
               >
                 <span className="sr-only">{authorName}</span>
 
-                <img
+                {/* <img
                   className="h-10 w-10 rounded-full"
                   src={imageUrlFor(buildImageObj(authorImage))
                     .width(600)
@@ -82,7 +82,7 @@ const PostPreview = ({ postData }) => {
                     .auto("format")
                     .url()}
                   alt=""
-                />
+                /> */}
               </a>
             </div>
             <div className="ml-3">

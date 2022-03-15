@@ -62,110 +62,50 @@ const ContactMe = () => {
                 </dd>
               </div>
             </dl>
-            {/* <p className="mt-6 text-base text-gray-500">
-              Looking for careers?{" "}
-              <a href="#" className="font-medium text-gray-700 underline">
-                View all job openings
-              </a>
-              .
-            </p> */}
           </div>
         </div>
         <div className="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
           <div className="max-w-lg mx-auto lg:max-w-none">
-            {/* <form
-              name="contact-form"
-              method="post"
-              data-netlify="true"
-              onSubmit="submit"
-              data-netlify-recaptcha="true"
-              data-netlify-honeypot="bot-field"
-              className="grid grid-cols-1 gap-y-6"
-            >
-              <input type="hidden" name="form-name" value="contact-form" />
-              <div hidden>
-                <input name="bot-field" />
-              </div>
-              <div>
-                <label htmlFor="name" className="sr-only">
-                  Full name
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  id="name"
-                  // value={state.name}
-                  autoComplete="name"
-                  // onChange={handleChange}
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  placeholder="Full name"
-                />
-              </div>
-              <div>
-                <label htmlFor="email" className="sr-only">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  // value={state.email}
-                  // onChange={handleChange}
-                  autoComplete="email"
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  placeholder="Email"
-                />
-              </div>
-              <div>
-                <label htmlFor="phone" className="sr-only">
-                  Phone
-                </label>
-                <input
-                  type="text"
-                  name="phone"
-                  id="phone"
-                  autoComplete="tel"
-                  // value={state.phone}
-                  // onChange={handleChange}
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
-                  placeholder="Phone"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="sr-only">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  // value={state.message}
-                  // onChange={handleChange}
-                  rows={4}
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
-                  placeholder="Message"
-                  defaultValue={""}
-                />
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Submit
-                </button>
-              </div>
-            </form> */}
-
             <form
               method="post"
               name="contact-form v2"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              className="grid grid-cols-1 gap-y-6"
             >
               <input type="hidden" name="form-name" value="contact-form v2" />
-              <input type="text" placeholder="Enter your name" name="name" />
-              <input type="text" placeholder="Enter your email" name="email" />
-              <button type="submit">Submit</button>
+              <input
+                type="text"
+                name="name"
+                autoComplete="name"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                placeholder="Full name"
+              />
+              <input
+                type="email"
+                name="email"
+                autoComplete="name"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                name="phone"
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                placeholder="Phone"
+              />
+              <textarea
+                name="message"
+                rows={4}
+                className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
+                placeholder="Message"
+              />
+              <button
+                type="submit"
+                className="inline-flex justify-center py-3 px-6 border border-transparent shadow-sm text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>
